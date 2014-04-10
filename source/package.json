@@ -1,0 +1,14 @@
+{
+  "name": "site-assembler",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-newer": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-contrib-less": "latest",
+    "assemble": "latest"
+  },
+  "author": "John Gully",
+  "license": "MIT"
+}

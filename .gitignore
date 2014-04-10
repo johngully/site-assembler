@@ -1,0 +1,12 @@
+# Build
+build
+
+# Node Modules
+node_modules/
+npm-debug.log
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
