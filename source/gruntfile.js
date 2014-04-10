@@ -31,11 +31,11 @@ module.exports = function (grunt) {
     watch: {
       assemble: {
         files: [
-          './layouts/*.hbs',
-          './templates/layouts/*.hbs',
-          './templates/pages/*.hbs',
-          './templates/partials/*.hbs',
-          './data/*.json',
+          './data/**/*.json',
+          './layouts/**/*.hbs',
+          './markdown/**/*.md',
+          './partials/**/*.hbs',
+          './templates/**/*.hbs'
         ],
         tasks: ['newer:assemble'],
         options: {
