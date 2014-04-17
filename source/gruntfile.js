@@ -1,6 +1,11 @@
 module.exports = function (grunt) {
   grunt.initConfig({
 
+    // Concurent tasks
+    concurrent: {
+      default: ['less', 'assemble']
+    },
+
     // Build HTML with Assemble.io
     assemble: {
       options: {
@@ -39,7 +44,7 @@ module.exports = function (grunt) {
         ],
         tasks: ['newer:assemble'],
         options: {
-          // don't reload since the css files changes are monitored
+          // don't reload since the html files changes are monitored
         }
       },
       less: {
@@ -65,11 +70,12 @@ module.exports = function (grunt) {
   });
 
   // Load the tasks
+  grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('assemble');
 
   // Speficty the default task
-  grunt.registerTask('default', ['less', 'assemble']);
+  grunt.registerTask('default', ['concurrent:default']);
 };
